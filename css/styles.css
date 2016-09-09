@@ -1,0 +1,270 @@
+@media screen and (max-width: 768px) {
+	.carousel-indicators li {visibility: hidden;}
+}
+
+@media only screen and (min-width : 1225px) {
+    .desktop-img {
+        display: block;
+    }
+    .tablet-img {
+        display: none;
+    }
+    .smartphone-img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width : 401px) and (max-width : 1024px){
+    .desktop-img {
+        display: none;
+    }
+    .tablet-img {
+        display: block;
+    }
+    .smartphone-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .desktop-img {
+        display: none;
+    }
+    .tablet-img {
+        display: none;
+    }
+    .smartphone-img {
+        display: block;
+    }
+}
+
+.page-header h1 {
+	text-align: right;
+}
+
+.page-header h3 {
+	text-align: right;
+	padding-top: 20px;
+}
+
+.page-header a {
+	position: relative;
+	margin: 0;
+	float: right; 
+}
+
+#logo-header {
+        width: 300px;
+        height: 90px;
+        margin: -8px -4px 15px;
+        max-width: 100%;
+        height: auto;
+}
+
+.centeredfotovideo
+{
+	width: 150%;
+
+}
+.evovideos {
+	width: 150%;
+	margin-left: -74px;
+}
+
+.displayed{
+    display: block;
+    margin-left: 440px;
+    margin-right: auto; 	
+    width: 400px;
+}
+
+#fotoidrincon{
+	width: 100%;
+        height: auto;
+        padding: 20px 0;
+}
+
+#fotoidcaruca{
+	width: 100%;
+        height: auto;
+        padding: 20px 0;
+}
+
+#fotoidevolution{
+	width: 100%;
+        height: auto;
+        padding: 20px 0;
+}
+
+.elastic-video {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+}
+
+.elastic-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#humboldtcovers {
+    margin-top: -15px;
+    padding-bottom: 30px;
+}
+
+#humboldtback {
+	 background-image: url("../img/cd.jpg");
+	 background-size: 103%;
+	 padding-bottom: 10px;
+	 margin-bottom: 10px;
+}
+
+.centerrow {
+	float: center;	
+}
+
+#slideshow li {
+	padding: 19px;
+}
+
+.skills {
+	display: inline-block;
+	float: left;	
+	margin: 0 auto;
+	position: relative;
+	padding-top: 130px;
+}
+
+.image {
+	margin: 0px auto;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+#frontFoto {
+}
+
+/*Typography*/
+
+h1, 
+h2,
+h3 {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+p, 
+li {
+	font-family: Georgia, Cambria, Palatino, Times, serif;
+} 
+
+.column {
+	font-size: 1.1em;
+}
+
+.main-text p {
+	font-size: 1.8em;
+	font-weight: 100;
+	-webkit-margin-before: 0;
+	padding-top: 19px;
+	font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+.column h3, .main-text h3 {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.footing p {
+	font-size: 0.8em;
+	text-align: right;
+	margin-top: 45px;
+	font-variant: small-caps;
+}
+
+.footing a {
+	font-size: 0.9em;
+	float: left;
+	margin-top: 45px;
+}
+
+.main-text p {
+	clear: both;
+	padding: 0 70px 0 65px;
+     	font-family: 'Raleway', Futura, Helvetica, Arial, sans-serif;
+	-webkit-margin-before: 0;
+}
+
+#backgroundim {
+/*    background-image: url(../img/landscape.jpg);*/
+    padding-bottom: 30px;
+}
+
+#backgroundim h3 {
+    font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+#backgroundim p {
+    font-family: Georgia, Cambria, Palatino, Times, serif;
+}
+
+.bloque {
+    margin: 1em;
+    width: 500px;
+    flex-grow: 1;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+
+.bloque > video {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.size-medium {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+}
+
+#videos {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+#appendices {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+}
+
+.codeentry {
+    min-width: 250px;
+    margin: 20px 20px 0 0;
+    padding-bottom: 5px;
+}
+
+.pdfobject-container { 
+    height: 500px;
+}
+
+.pdfobject { 
+    border: 1px solid #777; 
+}
+
+.box {
+    float: left;
+    margin: 10px 5px 5px 0;
+}
+
+#langChanger {
+    margin-bottom: 10px;
+}
