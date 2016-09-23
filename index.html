@@ -21,13 +21,11 @@
     <![endif]-->
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
-
+    
   </head>
   <body>
     <div class="container">
      <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Navigation ein-/ausblenden</span>
@@ -43,66 +41,65 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Monographs<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"><span lang="en">Monographs</span><span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="discurso_cubano.html">The official discourse and its influence on spoken language in Cuba (2016)</a>
+                  <li><a href="discurso_cubano.html"><span lang="en">The official discourse and its influence on spoken language in Cuba</span> (2016)</a>
                 </li>
-                <li><a href="homofobia_caribe.html">Homophobia and homophilia in Cuba and the Colombian Caribbean coast (2013)</a></li>
+                <li><a href="homofobia_caribe.html"><span lang="en">Homophobia and homophilia in Cuba and the Colombian Caribbean coast</span> (2013)</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Documentaries <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"><span lang="en">Documentaries/Ethnographic films</span> <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="lenguaje_cubano/rincon.html">Rinc&oacute;n (2005)</a></li>
                 
-                <li><a href="caruca.html">Caruca - Life is dance (2010)</a></li>
+                <li><a href="caruca.html"><span lang="en">Caruca - Life is dance </span>(2010)</a></li>
                 
-                <li><a href="evolution.html">Evolution: Three Cuban stories (2008)</a></li>
+                <li><a href="evolution.html"><span lang="en">Evolution: Three Cuban stories</span> (2008)</a></li>
                 
-                <li><a href="humboldt.html">On the trail of Alexander von Humboldt in Latin America (2009)</a></li>
+                <li><a href="humboldt.html"><span lang="en">On the trail of Alexander von Humboldt in Latin America</span> (2009)</a></li>
               </ul>
             </li>
-            <li><a href="links.html">Links</a></li>
-            <li><a href="author.html">The author</a></li>
+            <li><a href="links.html"><span lang="en">Links</span></a></li>
+            <li><a href="author.html"><span lang="en">The author</span></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html"><span lang="en">Contact</span></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
     </nav>
     <div class="page-header">
-        <h1>Cross Representation <br> <small><span lang="en">Multimodal representation of scientific results</span></small></h1>
+        <h1 lang="en">Cross Representation <br> <small><span lang="en">Multimodal representation of scientific results</span></small></h1>
     </div>
 
-        <div id="langChanger"><a href="?lang=en" onclick="window.lang.change('en'); window.history.pushState("", "", "?lang=en"); return false;">Switch to English</a> | <a href="?lang=de" onclick="window.lang.change('de'); window.history.pushState("", "", "?lang=de"); return false;">Switch to German</a> | <a href="?lang=es" onclick="window.lang.change('es'); window.history.pushState("", "", "?lang=es"); return false;">Switch to Spanish</a></div>
-
+<!--    <div id="langChanger"><a href="?lang=en" onclick="window.lang.change('en'); window.history.pushState("", "", "?lang=en"); return false;">English</a> | <a href="?lang=de" onclick="window.lang.change('de'); window.history.pushState("", "", "?lang=de"); return false;">Deutsch</a> | <a href="?lang=es" onclick="window.lang.change('es'); window.history.pushState("", "", "?lang=es"); return false;">Español</a></div>-->
+    <div id="langChanger"><a href="?lang=en" onclick="setLanguage('en'); return false;">English</a> | <a href="?lang=de" onclick="setLanguage('de'); return false;">Deutsch</a> | <a href="?lang=es" onclick="setLanguage('es'); return false;">Español</a></div>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="thumbnail">
             <img src="img/faded-revolutionary-wall-painting-in-Havana-thumbnail.jpg" alt="Faded revolutionary wall painting in Havana 2014" title="Faded revolutionary wall painting in Havana 2014">
           <div class="caption">
               <h3><span lang="en">Trend to methodological triangulation</span></h3>
-            <p>In order to obtain stimulating results and revealing insights of their study object, to get a more detailed and balanced picture of the phenomenon subject to study and therefore give more <strong>credibility</strong> and <strong>validity</strong> to the research results, academic scholars in humanities nowadays increasingly tend to apply and combine several research methodologies in the study of the same phenomenon (cross examination). By using such <strong>methodological triangulation</strong> this phenomenon is studied from different angles, which allows to obtain more convincing and revealing results and makes the researcher capable of more widely describing the complexity of human behavior.</p>
-            <p><a href="discurso_cubano.html" title="Official discourse and its influence on everyday language in Cuba" class="btn btn-primary" role="button">Example Master thesis</a></p>
+              <p> <span lang="en">In order to obtain stimulating results and revealing insights of their study object, to get a more detailed and balanced picture of the phenomenon subject to study and therefore give more </span><strong><span lang="en">credibility</span></strong><span lang="en"> and </span><strong><span lang="en">validity</span></strong> <span lang="en">to the research results, academic scholars in humanities nowadays increasingly tend to apply and combine several research methodologies in the study of the same phenomenon (cross examination). By using such</span> <strong><span lang="en">methodological triangulation</span></strong><span lang="en"> this phenomenon is studied from different angles, which allows to obtain more convincing and revealing results and makes the researcher capable of more widely describing the complexity of human behavior.</span></p>
+              <p><a href="discurso_cubano.html" title="Official discourse and its influence on everyday language in Cuba" class="btn btn-primary" role="button"><span lang="en">Example Master thesis</span></a></p>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="img/sociocultural-causal-model-for-homophobic-traits-in-language-in-Colombia.jpg" alt="sociocultural causal model for homophobic traits in language in Colombia" title="Sociocultural causal model for dependent variable Homophobic traits in language in Colombia">
+            <img src="img/sociocultural-causal-model-for-homophobic-traits-in-language-in-Colombia.jpg" alt="sociocultural causal model for homophobic traits in language in Colombia" title="Sociocultural causal model for dependent variable Homophobic traits in Language in Colombia">
           <div class="caption">
               <h3><span lang="en">Cross representing socio-cultural and statistical results</span></h3>
-            <p>In contemporary sociocultural investigations, <strong>scientific knowledge</strong> not necessarily has to be communicated exclusively through text anymore. The digital era offers multiple alternatives to present scientific results by means of <strong>multimodal manifestation forms</strong>, i.e.</p>
+              <p><span lang="en">In contemporary sociocultural investigations,</span> <strong><span lang="en">scientific knowledge</span></strong><span lang="en"> not necessarily has to be communicated exclusively through text anymore. The digital era offers multiple alternatives to present scientific results by means of</span> <strong><span lang="en"> multimodal manifestation forms</span></strong>, <span lang="en">i.e.</span></p>
             <ul>
-                <li> synthesising and interlinking text, </li>
-                <li> graphics, </li>
-                <li> statistical models </li>
-                <li> film essays, etc.</li> 
+                <li><span lang="en">synthesising and interlinking text</span>, </li>
+                <li><span lang="en">graphics</span>, </li>
+                <li><span lang="en">statistical models</span>, </li>
+                <li><span lang="en">film essays</span>, etc.</li> 
             </ul>
-                <p>that extend beyond a mere descriptive documentation or illustration, each one with a clearly defined interest of knowledge. That is <strong>cross representing</strong> data.</p>
+              <p><span lang="en">that extend beyond a mere descriptive documentation or illustration, each one with a clearly defined interest of knowledge. That is </span><strong><span lang="en">cross representing</span></strong><span lang="en">data.</span></p>
             
-            <p><a href="homofobia_caribe.html" title="Homophobia and homophilia in Cuba and Colombia" class="btn btn-primary" role="button">Example PhD thesis</a> </p>
+              <p><a href="homofobia_caribe.html" title="Homophobia and homophilia in Cuba and Colombia" class="btn btn-primary" role="button"><span lang="en">Example PhD thesis</span></a> </p>
           </div>
         </div>
       </div>    
@@ -110,9 +107,9 @@
         <div class="thumbnail">
             <img src="img/sunbeam.jpg" alt="Sunbeam">
           <div class="caption">
-            <h3>My interdisciplinary approach</h3>
-            <p>As a computer scientist and scholar in cultural and media studies, I feel attracted to New Media and am eager to use new technologies, since I took interest in sociocultural and etnographic investigations. These new media allow me to present the research results of my sociolinguistic and sociocultural studies more adequately. For example, the <strong>film essay</strong> can be used to explain sociocultural phenomena to a non-scientific audience. In time this communication medium, combined with other multimodal manifestation forms, hopefully will stop being an annexed or complementary material of expression to become an indispensable and inseparable medium of <strong>exposition of scientific results</strong> in Humanities.</p>
-            <p><a href="author.html" title="About Dr. Cornelius Griep" class="btn btn-primary" role="button">About the author</a></p>
+              <h3 lang="en">My interdisciplinary approach</h3>
+              <p><span lang="en">As a computer scientist and scholar in cultural and media studies, I feel attracted to New Media and am eager to use new technologies, since I took interest in sociocultural and etnographic investigations. These new media allow me to present the research results of my sociolinguistic and sociocultural studies more adequately. For example, the</span> <strong><span lang="en">film essay</span></strong><span lang="en"> can be used to explain sociocultural phenomena to a non-scientific audience. In time this communication medium, combined with other multimodal manifestation forms, hopefully will stop being an annexed or complementary material of expression to become an indispensable and inseparable medium of</span><strong><span lang="en">exposition of scientific results</span></strong><span lang="en">in Humanities.</span></p>
+              <p><a href="author.html" title="About Dr. Cornelius Griep" class="btn btn-primary" role="button"><span lang="en">About the author</span></a></p>
           </div>
         </div>
       </div>
@@ -124,11 +121,12 @@
 
         <div class="row">
           <div class="col-xs-2 col-sm-2 col-md-3 col-lg-4 footing">
-           <a href="#"> Imprint </a>
+              <a href="#"><span lang="en">Imprint</span></a>
           </div>
           <div class="col-xs-8 col-sm-8 col-md-6 col-lg-4">
               <img class="img-responsive desktop-img" src="img/cross-representation-logo-desktop.jpg" alt="Cross Representation Logo" title="Cross Representation Combining Academic and audiovisual research in Humanities by Cornelius Griep Logo">
               <img class="img-responsive tablet-img" src="img/cross-representation-logo-tablet.jpg" alt="Cross Representation Logo" title="Cross Representation Combining Academic and audiovisual research in Humanities by Cornelius Griep Logo">
+              
               <img class="img-responsive smartphone-img" src="img/cross-representation-logo-smartphone.jpg" alt="Cross Representation Logo" title="Cross Representation Combining Academic and audiovisual research in Humanities by Cornelius Griep Logo">
           </div>
           <div class="col-xs-2 col-sm-2 col-md-3 col-lg-4 footing">
@@ -146,42 +144,7 @@
 <script src="js/js.cookie.js" charset="utf-8" type="text/javascript"></script>
 <!--<script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>-->
 <!--<script src="js/langpack/nonDynamic.js" charset="utf-8" type="text/javascript"></script>-->
-
 <script src="js/google-analytics.js" type="text/javascript"></script>
-<script>
-    console.log ("test");
-var lang = new Lang();
-	lang.dynamic('de', 'js/langpack/de.json');
-       	lang.dynamic('es', 'js/langpack/es.json');
-	lang.init({
-		defaultLang: 'en'
-	});
-    function getparam(param) {
-	var vars = {};
-	window.location.href.replace( location.hash, '' ).replace( 
-		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
-		function( m, key, value ) { // callback
-			vars[key] = value !== undefined ? value : '';
-		}
-	);
-
-	if ( param ) {
-		return vars[param] ? vars[param] : null;	
-	}
-	return vars;
-}
-    
-        if(getparam("lang")== "es"){
-window.lang.change('es');
-        };
-        if(getparam("lang") == "de"){
-  window.lang.change('de')
-
-  };
-      if(getparam("lang") == "en"){
-  window.lang.change('en')
-
-  };
-    </script>
-</body>
+<script src="js/language.js" charset="utf-8" type="text/javascript"></script>
+  </body>
 </html>
