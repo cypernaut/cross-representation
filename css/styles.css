@@ -120,6 +120,8 @@
 
 .page-header h1 {
 	text-align: right;
+        color: #5bc0de;
+        padding-top: 33px;
 }
 
 .page-header h3 {
@@ -130,21 +132,114 @@
 .page-header a {
 	position: relative;
 	margin: 0;
-	float: right; 
+	float: left; 
 }
 
-#logo-header {
-        width: 300px;
-        height: 90px;
-        margin: -8px -4px 15px;
-        max-width: 100%;
-        height: auto;
+#intro-cs{
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.glyphicon {
+    font-size: 2.5em;
+}
+
+#entercode h5 {
+    text-align: center;
+}
+
+#lecturehomofobia {
+    margin-top: 60px;
+}
+
+.crossrep {
+	text-transform: uppercase;
+	margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1.1em;
+        color: white !important;
+}
+
+.crossrep a {
+	text-decoration: none;
+}
+
+body {
+    position: relative;
+    padding-top: 40px;
+  }
+  
+.navbar {
+	background-color: #2e6da4;
+        margin-bottom: 40px;
+        width: 100%;
+}
+
+.main-content {
+    top: 100px;
+}
+
+.glyphicon-eye-open {
+    font-size: 7em;
+    margin-top: 12px;
+    color: #037CA9;
+    float: right;
+}
+
+#up-triangle {
+   width: 0; 
+   height: 0; 
+   float: right;
+   border-bottom: 100px solid #037CA9; 
+   border-left: 50px solid transparent; 
+   border-right: 50px solid transparent; 
+}
+
+#balance {
+    font-size: 7em;
+    text-shadow: 1px 1px 1px #ccc;
+    float: right;
+    color: #037CA9;
+}
+
+#facebook {
+    font-size: 2em;
+}
+.navbar-nav li a {
+    color: white !important;
+}
+
+.navbar-nav li a:hover {
+    color: orange !important;
+}
+
+.dropdown-menu li a{
+        color: #336699 !important;
+}
+
+.dropdown-menu li a:hover {
+    background-color: orange;
+    color: #336699 !important;
+}
+
+.nav {
+	position: static;
+	top: 0;
+	margin-right: 20px;
+	z-index: 1;
+}
+
+.nav ul li {
+	padding: 10px 10px 10px;
+}
+
+.active a{
+    background-color: black !important;
 }
 
 .centeredfotovideo
 {
     width: 150%;
-
 }
 .evovideos {
     width: 150%;
@@ -328,8 +423,17 @@ li {
 
 .codeentry {
     min-width: 250px;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 10px 0;
     padding-bottom: 5px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.submit {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 .pdfobject-container { 

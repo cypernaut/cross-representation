@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Homophobia&homophilia in Caribbean: Download appendices</title>
+    <link rel="icon" href="/img/favicon.ico">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="/packages/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+  </head>
+  <body>
+        <div class="container">
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Navigation ein-/ausblenden</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <div>  <a class="crossrep navbar-brand" href="/index.html" title="Home"><span lang="en">Cross Representation</span></a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active btn-secondary disabled" id="buttondisable" onclick="alert('You need to enter the activation code to enable the content of this page')"> 
+                <a href="#entercode"><span lang="en">Download Appendices</span><span class="sr-only">(aktuell)</span></a>
+            </li>
+            <li> <a href="/homofobia_caribe/supporting-videos/index.html"><span lang="en">Supporting videos</span></a> </li>
+ 
+          </ul>
+         
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="page-header">
+      <h1 lang="en">Homophobia and homophilia in Cuba and the Colombian Caribbean coast</h1>
+        
+        <a href="/homofobia_caribe.html"> 
+          <span class="glyphicon glyphicon-triangle-top"></span>
+        </a>
+      <h3><strong><span lang="en">Download Appendices</span></strong></h3>
+
+    </div>
+    <div id="langChanger"><a href="?lang=en" onclick="setLanguage('en'); return false;">English</a> | <a href="?lang=de" onclick="setLanguage('de'); return false;">Deutsch</a> | <a href="?lang=es" onclick="setLanguage('es'); return false;">Español</a></div>
+
+        <div id="entercode">
+            <h5 lang="en">
+                Please, enter the activation code (see page 227 of the book) to get access to the appendices.
+            </h5>
+            <div>
+                <input class="codeentry" type="text"/>
+                <button class="submit btn btn-primary" style="margin-top: 3px"><span lang="en">Send activation code</span></button>
+            </div>
+        </div>
+
+  </div> <!-- end container-->
+
+
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/google-analytics.js" type="text/javascript"></script>
+
+    <script src="https://wzrd.in/standalone/minixhr"></script>
+<script src='/js/pdfobject.js'></script>
+    <script> 
+      var button = document.querySelector(".submit")
+      button.addEventListener("click", function (e) {
+      var key = "invite-codes"
+      var val = document.querySelector(".codeentry").value
+      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json'
+      minixhr(request, responseHandler)
+        function responseHandler (data) {
+          data = JSON.parse(data)
+          var keys = Object.keys(data)
+          console.log("search for=", val)
+          keys = keys.filter(function (key) {
+              return data[key].value === val
+          })
+          if (keys.length) {
+              console.log(data[keys[0]].value);
+              PDFObject.embed("/homofobia_caribe/download-appendices/appendicesI-III.pdf");
+          }
+          else alert("Sorry, wrong key. You need to enter a valid activation code to see this content.")
+        }
+    })
+</script>
+
+    <script src="/js/language.js" charset="utf-8" type="text/javascript"></script>
+  </body>
+</html>
