@@ -28,9 +28,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active btn-secondary disabled" id="buttondisable" onclick="alert('You need to enter the activation code to enable the content of this page')"> 
-                <a href="#entercode"><span lang="en">Download Appendices</span><span class="sr-only">(aktuell)</span></a>
-            </li>
+            
             <li> <a href="/homofobia_caribe/supporting-videos/index.html"><span lang="en">Supporting videos</span></a> </li>
  
           </ul>
@@ -53,12 +51,16 @@
             <h5 lang="en">
                 Please, enter the activation code (see page 227 of the book) to get access to the appendices.
             </h5>
-            <div>
                 <input class="codeentry" type="text"/>
-                <button class="submit btn btn-primary" style="margin-top: 3px"><span lang="en">Send activation code</span></button>
-            </div>
+                <button class="submit btn btn-primary"><span lang="en">Send activation code</span></button>
         </div>
-
+    <br>
+    <br>
+    <div id="buttondiv">    
+    <button class="btn btn-primary" id="buttonappendices" onclick="alert('You need to enter the activation code to enable the content of this page')"> 
+                <a href="#entercode"><span lang="en">Download Appendices</span></a>
+    </button>
+    </div>
   </div> <!-- end container-->
 
 

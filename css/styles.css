@@ -188,9 +188,27 @@
     text-align: center;
 }
 
-.codeentry {
+/*.codeentry {
     margin-top: 3px;
     margin: 20px;
+    margin-bottom: 90px;
+}*/
+
+#buttondiv {
+   text-align: center;
+}
+
+.submit {
+    width: 200px !important;
+    margin: auto !important;
+    /* margin-left: 35%; */
+    /* margin-right: 35%; */
+    display: block;
+}
+
+#buttonappendices a {
+    color: white;
+    text-decoration:none;
 }
 
 #lecturehomofobia {
@@ -225,8 +243,9 @@ body {
 }
 
 .glyphicon-eye-open {
-    font-size: 7em;
+    font-size: 5.87em;
     margin-top: 12px;
+    margin-right: -5px;    
     color: #037CA9;
     float: right;
 }
@@ -235,13 +254,15 @@ body {
    width: 0; 
    height: 0; 
    float: right;
-   border-bottom: 100px solid #037CA9; 
-   border-left: 50px solid transparent; 
-   border-right: 50px solid transparent; 
+   margin-top: 20px;
+   border-bottom: 75px solid #037CA9; 
+   border-left: 45px solid transparent; 
+   border-right: 45px solid transparent; 
 }
 
 #balance {
-    font-size: 7em;
+    font-size: 5.87em;
+    margin-right: -15px;
     text-shadow: 1px 1px 1px #ccc;
     float: right;
     color: #037CA9;
@@ -471,12 +492,15 @@ li {
 }
 
 .codeentry {
-    min-width: 250px;
-    margin: 20px 20px 10px 0;
+
+    margin: 20px auto;
+    position: relative;
+    display: block;
     padding-bottom: 5px;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+    width: 250px;
+    text-align: left;
+    max-width: 60%;
+
 }
 
 .submit {
