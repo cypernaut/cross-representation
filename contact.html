@@ -27,7 +27,7 @@
     <![endif]-->
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
-    
+    <script src="/js/js.cookie.js" type="text/javascript"></script>    
   </head>
   <body>
    <div class="container">
@@ -87,18 +87,18 @@
           <div style="padding-top: 25px">
               <h3 lang="en">Contact by email or Skype</h3>
                <div> 
-                <ul style="list-style-type: none; font-size: 1.2em">
+                <ul id="contact-list">
                     <li><span lang="en">email</span>: info@cross-representation.com</li>
                     <li>skype: griep.hu</li>
                 </ul>
                </div>
           </div>
-          <div style="padding-top: 20px">
+          <div>
               <h3 lang="en">Registration with activation code</h3>
               <p lang="en">
               In order to get access to ebooks, audiovisual material as well as the appendices with the statistical results of the monograph Homophobia and homophilia in Cuba and the Colombian Caribbean coast you should enter the activation code which you can find inside the hard copy of the book. Once you enter the activation code, you'll have access to all content permanently (your browser will remember this). If you are experiencing any problems, please send a message.
               </p>
-          <div>
+          <div id="entercode">
                 <input class="codeentry" type="text"/>
                 <button class="submit btn btn-primary" style="margin-top: 3px"><span lang="en">Send activation code</span></button>
           </div>
@@ -169,26 +169,34 @@
     <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/language.js" charset="utf-8" type="text/javascript"></script>
-<!--    <script src="https://wzrd.in/standalone/minixhr"></script>-->
+    
     <script src="js/minixhr.js"></script>
     <script> 
-  var button = document.querySelector(".submit")
+   var button = document.querySelector(".submit");
   button.addEventListener("click", function (e) {
-      var key = "invite-codes"
+      var key = "invite-codes";
       var val = document.querySelector(".codeentry").value
-      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json'
-      minixhr(request, responseHandler)
+      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json';
+      minixhr(request, responseHandler);
         function responseHandler (data) {
-          data = JSON.parse(data)
-          var keys = Object.keys(data)
-          console.log("search for=", val)
+          data = JSON.parse(data);
+          var keys = Object.keys(data);
+          console.log("search for=", val);
           keys = keys.filter(function (key) {
-              return data[key].value === val
-          })
-          if (keys.length)         console.log(data[keys[0]].value)
-          else console.log("wrong key")
+              return data[key].value === val;
+          });
+          if (keys.length) {
+              console.log(data[keys[0]].value);
+              Cookies.set("activated", "true");
+          }
+          else console.log("wrong key");
         }
-    })
+    });
+    </script>
+    <script>
+   if (Cookies.get("activated")) {
+       $("#entercode").hide();
+   }
     </script>
   </body>
 </html>

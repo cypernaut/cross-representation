@@ -1,18 +1,17 @@
 <!docfile>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Homophobia & homophilia: audiovisual contents for Cuba</title>	
-		<!-- Latest compiled and minified CSS -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homophobia & homophilia: audiovisual contents for Cuba</title>	
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="/packages/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/js.cookie.js" type="text/javascript"></script>
     <script src="/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
-
-	</head>
+</head>
 <body>
     <div class="container">
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -148,38 +147,42 @@
     <script src="/js/language.js" charset="utf-8" type="text/javascript"></script>  
     <script src="/js/minixhr.js"></script>
     <script>
-        var XY873sdf3 = false
-  var button = document.querySelector(".submit")
+  var button = document.querySelector(".submit");
   button.addEventListener("click", function (e) {
-      var key = "invite-codes"
+      var key = "invite-codes";
       var val = document.querySelector(".codeentry").value
-      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json'
-      minixhr(request, responseHandler)
+      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json';
+      minixhr(request, responseHandler);
         function responseHandler (data) {
-          data = JSON.parse(data)
-          var keys = Object.keys(data)
-          console.log("search for=", val)
+          data = JSON.parse(data);
+          var keys = Object.keys(data);
+          console.log("search for=", val);
           keys = keys.filter(function (key) {
-              return data[key].value === val
+              return data[key].value === val;
           })
           if (keys.length) {
-              console.log(data[keys[0]].value)
-              XY873sdf3 = true
+              console.log(data[keys[0]].value);
+              Cookies.set("activated", "true");
               $.each($("video"), function (index, video) {
-                  console.log(video)
-                  video.setAttribute("controls", "controls")
+                  console.log(video);
+                  video.setAttribute("controls", "controls");
               })
           }
-          else console.log("wrong key")
+          else console.log("wrong key");
         }
     })
 </script>
 <script>
     function toggleVideo(video) {
-        if (XY873sdf3) {
+        if (Cookies.get("activated")) {
             if (typeof InstallTrigger == 'undefined') (video.paused ? video.play() : video.pause());
         }
     }
+</script>
+<script>
+   if (Cookies.get("activated")) {
+       $("#entercode").hide();
+   }
 </script>
 </body>
 </html>

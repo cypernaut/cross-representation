@@ -10,10 +10,11 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="/packages/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <script src="/js/jquery.min.js" type="text/javascript"></script>
     <script src="/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/js.cookie.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body onload="seePdf()">
         <div class="container">
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
@@ -56,8 +57,9 @@
         </div>
     <br>
     <br>
+
     <div id="buttondiv">    
-    <button class="btn btn-primary" id="buttonappendices" onclick="alert('You need to enter the activation code to enable the content of this page')"> 
+    <button class="btn btn-primary" id="buttonappendices" onclick="seePdf()"> 
                 <a href="#entercode"><span lang="en">Download Appendices</span></a>
     </button>
     </div>
@@ -70,27 +72,46 @@
     <script src='/js/pdfobject.js'></script>
     <script src="/js/language.js" charset="utf-8" type="text/javascript"></script>
     <script src="/js/minixhr.js"></script>
-    <script> 
-      var button = document.querySelector(".submit")
-      button.addEventListener("click", function (e) {
-      var key = "invite-codes"
+    <script>
+  var button = document.querySelector(".submit");
+  button.addEventListener("click", function (e) {
+      var key = "invite-codes";
       var val = document.querySelector(".codeentry").value
-      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json'
-      minixhr(request, responseHandler)
+      var request    = 'https://cross-representation-4a98e.firebaseio.com/'+key+'.json';
+      minixhr(request, responseHandler);
         function responseHandler (data) {
-          data = JSON.parse(data)
-          var keys = Object.keys(data)
-          console.log("search for=", val)
+          data = JSON.parse(data);
+          var keys = Object.keys(data);
+          console.log("search for=", val);
           keys = keys.filter(function (key) {
-              return data[key].value === val
+              return data[key].value === val;
           })
           if (keys.length) {
               console.log(data[keys[0]].value);
-              PDFObject.embed("/homofobia_caribe/download-appendices/appendicesI-III.pdf");
+              Cookies.set("activated", "true");
           }
-          else alert("Sorry, wrong key. You need to enter a valid activation code to see this content.")
+          else alert("Sorry, wrong key. You need to enter a valid activation code to see this content.");
         }
     })
-    </script>
+</script>
+<script>
+   if (Cookies.get("activated")) {
+       $("entercode").hide();
+   }
+   
+// solution without jquery:          if (Cookies.get("activated")) {
+// document.getElementById("entercode").css-class-with-some-display:none
+   
+</script>
+<script> 
+    function seePdf() {
+        if (Cookies.get("activated")) {
+            PDFObject.embed("/homofobia_caribe/download-appendices/appendicesI-III.pdf", "#buttondiv");
+        }
+        else {
+            alert('You need to enter the activation code to enable the content of this page');
+        }
+    }
+</script>
   </body>
 </html>

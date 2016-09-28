@@ -162,8 +162,17 @@
 	text-align: right;
         color: #5bc0de;
         padding-top: 33px;
+        font-family: Merriweather, Futura, Helvetica, Arial, serif;
 }
 
+.contenttable {
+     width: 100%; 
+    }
+
+.pdfpadding {
+    padding-bottom: 130%;
+}
+        
 .page-header h3 {
 	text-align: right;
 	padding-top: 20px;
@@ -184,6 +193,11 @@
     font-size: 2.5em;
 }
 
+#contact-list {
+    list-style-type: none; 
+    font-size: 1.2em; 
+    padding-bottom: 20px;
+}
 #entercode h5 {
     text-align: center;
 }
