@@ -1,3 +1,40 @@
+@media (max-width: 1025px) {
+   .navbar-header {
+       float: none;
+   }
+   .navbar-left,.navbar-right {
+       float: none !important;
+   }
+   .navbar-toggle {
+       display: block;
+   }
+   .navbar-collapse {
+       border-top: 1px solid transparent;
+       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+   }
+   .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+   .navbar-collapse.collapse {
+       display: none!important;
+   }
+   .navbar-nav {
+       float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+       float: none;
+   }
+   .navbar-nav>li>a {
+       padding-top: 10px;
+       padding-bottom: 10px;
+   }
+   .collapse.in{
+         display:block !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
 	.carousel-indicators li {visibility: hidden;}
 }
@@ -36,8 +73,11 @@
     .carousel-caption {
         font-size: 1.1em;
     }
+    #main-content { 
+        padding-top: 100px;
+    }
 }
-
+    
 @media only screen and (min-width : 401px) and (max-width : 1024px){
     .desktop-img {
         display: none !important;
@@ -120,8 +160,19 @@
 
 .page-header h1 {
 	text-align: right;
+        color: #5bc0de;
+        padding-top: 33px;
+        font-family: Merriweather, Futura, Helvetica, Arial, serif;
 }
 
+.contenttable {
+     width: 100%; 
+    }
+
+.pdfpadding {
+    padding-bottom: 130%;
+}
+        
 .page-header h3 {
 	text-align: right;
 	padding-top: 20px;
@@ -130,21 +181,149 @@
 .page-header a {
 	position: relative;
 	margin: 0;
-	float: right; 
+	float: left; 
 }
 
-#logo-header {
-        width: 300px;
-        height: 90px;
-        margin: -8px -4px 15px;
-        max-width: 100%;
-        height: auto;
+#intro-cs{
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.glyphicon {
+    font-size: 2.5em;
+}
+
+#contact-list {
+    list-style-type: none; 
+    font-size: 1.2em; 
+    padding-bottom: 20px;
+}
+#entercode h5 {
+    text-align: center;
+}
+
+/*.codeentry {
+    margin-top: 3px;
+    margin: 20px;
+    margin-bottom: 90px;
+}*/
+
+#buttondiv {
+   text-align: center;
+}
+
+.submit {
+    width: 200px !important;
+    margin: auto !important;
+    /* margin-left: 35%; */
+    /* margin-right: 35%; */
+    display: block;
+}
+
+#buttonappendices a {
+    color: white;
+    text-decoration:none;
+}
+
+#lecturehomofobia {
+    margin-top: 60px;
+}
+
+.crossrep {
+	text-transform: uppercase;
+	margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1.1em;
+        color: white !important;
+}
+
+.crossrep a {
+	text-decoration: none;
+}
+
+body {
+    position: relative;
+    padding-top: 40px;
+  }
+  
+.navbar {
+	background-color: #2e6da4;
+        margin-bottom: 40px;
+        width: 100%;
+}
+
+.main-content {
+    top: 100px;
+}
+
+.glyphicon-eye-open {
+    font-size: 5.87em;
+    margin-top: 12px;
+    margin-right: -5px;    
+    color: #037CA9;
+    float: right;
+}
+
+#up-triangle {
+   width: 0; 
+   height: 0; 
+   float: right;
+   margin-top: 20px;
+   border-bottom: 75px solid #037CA9; 
+   border-left: 45px solid transparent; 
+   border-right: 45px solid transparent; 
+}
+
+#balance {
+    font-size: 5.87em;
+    margin-right: -15px;
+    text-shadow: 1px 1px 1px #ccc;
+    float: right;
+    color: #037CA9;
+}
+
+#facebook {
+    font-size: 2em;
+}
+.navbar-nav li a {
+    color: white !important;
+}
+
+.navbar-nav li a:hover {
+    color: orange !important;
+}
+
+.dropdown-menu li a{
+        background-color: #336699 !important;
+        padding: 15px;
+        margin: -15px;
+        color: white;
+}
+
+.dropdown-menu li a:hover {
+    color: orange;
+}
+
+.nav {
+	position: static;
+	top: 0;
+	margin-right: 20px;
+	z-index: 1;
+}
+
+.nav ul li {
+	padding-top: 10px;
+        padding-left: 14px;
+        padding-bottom: 10px;
+}
+
+.active a{
+    background-color: black !important;
 }
 
 .centeredfotovideo
 {
     width: 150%;
-
 }
 .evovideos {
     width: 150%;
@@ -327,9 +506,21 @@ li {
 }
 
 .codeentry {
-    min-width: 250px;
-    margin: 20px 20px 0 0;
+
+    margin: 20px auto;
+    position: relative;
+    display: block;
     padding-bottom: 5px;
+    width: 250px;
+    text-align: left;
+    max-width: 60%;
+
+}
+
+.submit {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 .pdfobject-container { 
