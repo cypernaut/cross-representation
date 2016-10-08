@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cuban Revolution has left evident marks in the language of Cuban people. The effects of this influence can be noticed in the language of several generations">
     <meta name="robots" content="index">
-    <link rel="icon" href="../img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
     <title>Official discourse and its linguistic influence in Cuba</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Slate CSS -->
   <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+  <!-- Lazy Load Responsive images CSS to load only used images-->
+<link rel="stylesheet" href="css/responsivelyLazy.min.css">
   <!-- Fontawesome CSS -->
   <link href="packages/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
@@ -85,11 +87,8 @@
         <li data-target="#myCarousel" data-slide-to="26"></li>        
     </ol>
     <div class="carousel-inner">
-        <div class="item active">
-            <img src="img/slider/always-revolution-in-havana-2006-desktop.jpg" class="img-responsive desktop-img" alt="Always Revolution in Havana 2006" />
-            <img src="img/slider/always-revolution-in-havana-2006.jpg" class="img-responsive desktopsmall-img" alt="Always Revolution in Havana 2006" />
-            <img src="img/slider/always-revolution-in-havana-2006-tablet.jpg" class="img-responsive tablet-img" alt="Always Revolution in Havana 2006" />
-            <img src="img/slider/always-revolution-in-havana-2006-smartphone.jpg" class="img-responsive smartphone-img" alt="Always Revolution in Havana 2006" />
+        <div class="item active responsively-lazy">
+            <img alt="Always Revolution in Havana 2006" src="img/slider/always-revolution-in-havana-2006-smartphone.jpg" data-srcset="img/slider/always-revolution-in-havana-2006-desktop.jpg 1920w, img/slider/always-revolution-in-havana-2006.jpg 1400w, img/slider/always-revolution-in-havana-2006-tablet.jpg 1024w" srcset="data:image"/>
             <div class="carousel-caption"><p lang="en">Always Revolution in Havana 2006</p></div>
         </div>
         <div class="item">
@@ -432,10 +431,10 @@
     </div>
   </div>
   <hr>
-
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/wow.min.js" type="text/javascript"></script>
     <script src="js/google-analytics.js" type="text/javascript"></script>
     <script src="js/language.js" charset="utf-8" type="text/javascript"></script>
+    <script async src="js/responsivelyLazy.min.js"></script>
     </body>
 </html>
