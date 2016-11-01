@@ -158,6 +158,11 @@
     margin-top: -20px;
 }
 
+.responsively-lazy {
+    padding-bottom:68.44%;
+    width: 100%;
+}
+
 .page-header h1 {
 	text-align: right;
         color: #5bc0de;
@@ -440,7 +445,6 @@ li {
 }
 
 .footing p {
-	font-size: 0.8em;
 	text-align: right;
 	margin-top: 45px;
 	font-variant: small-caps;
@@ -538,4 +542,8 @@ li {
 
 #langChanger {
     margin-bottom: 10px;
+}
+
+.responsively-lazy {
+    padding-bottom:68.44%;
 }
