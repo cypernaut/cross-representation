@@ -124,7 +124,7 @@
            <h3 lang="en" class="lead" style="text-align:center; padding-top: 20px;">Alternatively drop a line by this formular</h3>
       
         <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-            <form id="formcontact" action="php/senden.php" method="post">
+            <form id="formcontact" action="https://formspree.io/info@cross-representation.com" method="post">
             <div class="form-group">
               <label lang="en" for="firstname">First name</label>
               <input type="text" class="form-control" name="firstname" id="firstname" required placeholder="David">
@@ -147,7 +147,7 @@
             </div>
             <div class="form-group">
               <label lang="en" for="message">Your message</label>
-              <textarea lang="en" id="message" name="message" class="form-control" rows="3" required placeholder="Please, write your message here..."></textarea>
+              <textarea minlength=20 lang="en" id="message" name="message" class="form-control" rows="3" required placeholder="Please, write your message here..."></textarea>
             </div>
             <div class="form-group text-center">
                 <button type="submit" name="submit" class="btn btn-primary"><span lang="en">Send message</span></button>
